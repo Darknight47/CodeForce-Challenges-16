@@ -39,18 +39,5 @@ AFTFBTTFFNFTTZ
 cases = int(input())
 for _ in range(cases):
     s = input()
-    ans = ""
-    i = 0
-    while i < len(s):
-        
-        if i + 2 < len(s) and s[i:i+3] == "FFT":
-            ans += "FTF"
-            i += 3  
-        
-        elif i + 2 < len(s) and s[i:i+3] == "NTT":
-            ans += "TNT"
-            i += 3
-        else:
-            ans += s[i]
-            i += 1
-    print(ans)
+    ans = sorted(s, reverse=True)
+    print(''.join(ans))    
